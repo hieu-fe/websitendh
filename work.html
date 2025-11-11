@@ -230,13 +230,68 @@
     </section>
 
     <!-- Contact -->
-    <section class="contact"></section>
+    <section class="contact">
+        <div class="contact_txt">
+            <p class="title">What can us do for you?</p>
+            <p>We are ready to work on a project of any complexity,</p>
+            <p>whether it’s commercial or residential.</p>
+            <form class="contact_form">
+                <div class="form_row">
+                    <input type="text" placeholder="Your Name*" required>
+                    <input type="email" placeholder="Email*" required>
+                </div>
+                <div class="form_row">
+                    <select name="form_reason" id="form_reason" required>
+                        <option value="" disabled selected hidden >Reason for Contacting*</option>
+                        <option value="support">Support</option>
+                        <option value="tech">Technical Issue</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <input type="text" placeholder="Phone">
+                </div>
+                <textarea placeholder="Message"></textarea>
+                <p class="contact_form_note">* indicates a required field</p>
+                <button type="button">Submit</button>
+            </form>
+        </div>
+    </section>
 </main>
 
 
 <!-- Footer -->
 <footer>
+    <!-- Bottom -->
+    <section class="bottom">
+        <div class="bottom_left">
+            <p><span>ADDRESS: </span>6391 Elgin St. Celina, Delaware 10299</p>
+            <p><span>PHONE: </span>+84 1102 2703</p>
+            <p><span>EMAIL: </span>hello@thebox.com</p>
+            <div class="bottom_logo">
+            <img src="./images/logo.jpg" alt="Logo TheBox">
+            <h1><span><i>The</i></span>Box</h1>
+        </div>
+        </div>
 
+        <div class="bottom_right">
+            <p>NEWSLETTER:</p>
+            <div class="bottom_right_box">
+                <input type="email" placeholder="Your email here">
+                <button id="bottom_btn">Subscribe</button>
+            </div>
+            <p>SOCIAL</p>
+            <div class="bottom_social_img">
+                <img src="./images/footer_fb.jpg" alt="Facebook">
+                <img src="./images/footer_in.jpg" alt="LinkedIn">
+                <img src="./images/footer_tw.jpg" alt="X">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <p class="footer_txt">TheBox Company © 2022. All Rights Reserved</p>
+    </section>
 </footer>
 
 </body>
