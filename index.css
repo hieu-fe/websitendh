@@ -494,7 +494,7 @@ a{
 .contact_txt .title{
     padding: 10px;
 }
-.contact_form{
+.contact_form{  
     max-width: 433.19px;
     margin: 0 auto; 
     padding: 10px;
@@ -605,6 +605,9 @@ a{
     border: 1px solid var(--color-third);
     border-radius: 2px;
     box-sizing: border-box;
+}
+.bottom_right_box input::placeholder{
+    color: var(--color-inputtext);
 }
 #bottom_btn{
     background-color: var(--color-primary-2);
