@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function</title>
+  <style>
+    h2{
+    	color:blueviolet;
+    	box-shadow: 5px;
+    	font-weight: 700;
+    	text-align: center;
+	    padding-bottom: 20px;
+	}
+	.box{
+    	display: flex;
+    	align-items: center;
+    	justify-content: flex-start;
+    	padding: 10px;
+    	gap: 20px;
+	}
+	.myText{
+    	color:black;
+    	height: fit-content;
+    	width: fit-content;
+    	font-size: 20px;
+    	text-align: center;
+    	font-weight: 700;
+	}
+    #text2{
+    	color:green;
+        font-size: 20px;
+    }
+	#input1{
+    	width: 100px;
+    	height: 30px;
+    	border-radius: 4px;
+    	border: 2px solid black;
+	}
+    #input2{
+    width: 100px;
+    	height: 30px;
+    	border-radius: 4px;
+    	border: 2px solid black;
+    }
+	.myButton{
+    	height: auto;
+    	background-color: aqua;
+    	color: black;
+    	border-radius: 10%;
+        padding:7px;
+	}
+	.myButton:hover{
+    	transform: translateY(-5px);
+    	box-shadow: 0 2px 2px black;
+	}
+  </style>
+</head>
+<body>
+    <h2>Kiểm tra số nguyên tố</h2>
+    <div class="box">
+        <p id="text_1" class="text_all">Nhập số để kiểm tra :</p>
+        <input type="text" id="input_1" class="input_all" placeholder="nhap_so">
+        <button id="button_1" class="button_all">Kiểm tra</button>
+    </div>
+    <div class="box">
+        <p id="" class="text_all">Nhập số :</p>
+        <input type="text" id="input_2" class="input_all" placeholder="nhap_so">
+        <button id="button_2" class="button_all">In ra</button>
+    </div>
+    <h2 id="h2_second">Dãy số in ra ở đây</h2>
+    <p id="text_2" class="text_all"></p>
+    <script>
+        const button1 = document.getElementById('button_1');
+const button2 = document.getElementById('button_2');
+const text1 = document.getElementById('text_1');
+const text2 = document.getElementById('text_2');
+const input1 = document.getElementById('input_1');
+const input2 = document.getElementById('input_2');
+
+function check(n){
+    if (n < 2) return false;
+    for (let i = 2 ; i<=n-1; i++){
+        if (n % i ===0) return false;
+    }
+    return true;
+}
+function hienthi(a){
+    let dem = "";
+    for(let d = 1; d<=a; d++){
+        dem += d + " "
+    }return dem;
+}
+
+button1.addEventListener('click', () => {
+    let n = Number(input1.value);
+    if (check(n)) {
+        alert('Đây là số nguyên tố :))');
+        console.log(`Số ${n} là số nguyên tố`);
+    }else {
+        alert('Đây không phải là số nguyên tố :((');
+        console.log(`Số ${n} không phải là số nguyên tố`);
+    }
+    text1.innerHTML='Vào console để đọc thông báo !!!';
+});
+
+button2.addEventListener('click', () =>{
+    let a = Number(input1.value);
+    text2.innerHTML=hienthi(a);
+    console.log(hienthi(a));
+});
+    </script>
+</body>
+</html>
